@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="Peugeot" table="MODELS">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="malli" column="malli" type="string"/>
+      <property name="moottori" column="moottori" type="string"/>
+      <property name="korityyppi" column="korityyppi" type="string"/>
+   </class>
+</hibernate-mapping>

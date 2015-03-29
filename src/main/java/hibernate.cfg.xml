@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+       
+
+    <!-- HSQLDB Connection -->
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:mem:testi</property>
+        <property name="hibernate.connection.username">SA</property>
+        <property name="connection.pool_size">1</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.show_sql"> value="true"</property>
+        <property name="hibernate.format_sql"> value="true"</property>
+     <!--   <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>   --> 
+		
+   <!-- List of XML mapping files -->
+  <!--   <mapping resource="fi/isokaju/DialogBox2/model/Peugeot.hbm.xml"/> -->
+   <mapping class="fi.isokaju.DialogBox2.model.Peugeot" /> 
+    
+     <mapping class="fi.isokaju.DialogBox2.model.P308" /> 
+
+</session-factory>
+</hibernate-configuration>
